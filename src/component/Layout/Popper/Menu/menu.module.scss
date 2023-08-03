@@ -1,0 +1,23 @@
+.menu-items {
+    width: 224px;
+
+    .menu-btn {
+        color: black;
+        background-color: transparent;
+        margin-left: 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+.menu-popper {
+    padding-bottom: 8px;
+}
+
+.menu-btn {
+    width: 100%;
+    justify-content: flex-start;
+    height: 48px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
