@@ -17,7 +17,6 @@ import {
     faUser,
     faBookmark,
 } from '@fortawesome/free-solid-svg-icons';
-import { faMessage, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import HeadLessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 
@@ -27,6 +26,9 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Layout/Popper';
 import AccountItem from '~/component/AccountItem';
 import Menu from '~/component/Layout/Popper/Menu';
+import { InboxIcon, MessageIcon } from '~/component/Icons';
+
+import Images from '~/component/Image';
 
 const cx = classnames.bind(style);
 
@@ -140,13 +142,13 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Message" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                    <MessageIcon width="2.6rem" height="2.6rem" />
                                 </button>
                             </Tippy>
 
                             <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -160,10 +162,10 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691071200&x-signature=xtW5qyQLVVJs88Fq8zjhhcKiNXg%3D"
+                            <Images
                                 className={cx('user-avatar')}
-                                alt="Neko"
+                                src=""
+                                fallback="https://scontent.fhan3-4.fna.fbcdn.net/v/t39.30808-6/363361370_1306876113550856_5382002322380343456_n.jpg?_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xUCWVljvwgQAX8Xe7-w&_nc_ht=scontent.fhan3-4.fna&oh=00_AfDauzPyq0Fv9PmRzhvGUOHeHGMe0LWvr__LqDzbpg6cbg&oe=64D42B59"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
