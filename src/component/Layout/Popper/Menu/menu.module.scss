@@ -13,6 +13,10 @@
     padding-bottom: 8px;
 }
 
+.menu-scrollable {
+    overflow-y: auto;
+}
+
 .menu-btn {
     width: 100%;
     justify-content: flex-start;
@@ -27,6 +31,7 @@
     position: relative;
     height: 50px;
     margin-top: -8px;
+    flex-shrink: 0;
 }
 .back-btn {
     width: 50px;
