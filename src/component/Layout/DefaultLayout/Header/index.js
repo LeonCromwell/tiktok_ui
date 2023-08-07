@@ -14,6 +14,7 @@ import {
     faBookmark,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
+import { Link } from 'react-router-dom';
 
 import Button from '~/component/Button';
 import style from './Header.module.scss';
@@ -22,7 +23,7 @@ import Menu from '~/component/Layout/Popper/Menu';
 import { InboxIcon, MessageIcon } from '~/component/Icons';
 
 import Images from '~/component/Image';
-import Search from '../../Search';
+import Search from '~/component/Layout/Search/index';
 
 const cx = classnames.bind(style);
 
@@ -92,7 +93,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="TikTok"></img>
+                <Link to="/" className={cx('tiktok-logo')}>
+                    <img src={images.logo} alt="TikTok"></img>
+                </Link>
                 <Search />
                 <div className={cx('action')}>
                     <Button text medium leftIcon={<FontAwesomeIcon icon={faPlus} />}>
