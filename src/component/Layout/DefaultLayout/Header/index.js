@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import classnames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -85,18 +84,11 @@ const userMenu = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-
     const currentUser = true;
     const handleMenuChange = (onChange) => {
         console.log(onChange);
     };
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>

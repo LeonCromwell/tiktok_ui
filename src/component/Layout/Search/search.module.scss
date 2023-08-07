@@ -47,6 +47,16 @@
     color: rgba(22, 24, 35, 0.34);
     border: none;
 }
+
+.spinner {
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
 .search-btn {
     width: var(--search-button-width);
     height: 100%;
