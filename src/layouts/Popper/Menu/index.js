@@ -5,7 +5,7 @@ import classnames from 'classnames/bind';
 import { useState } from 'react';
 
 import Header from './Header';
-import { Wrapper as PopperWrapper } from '~/component/Layout/Popper';
+import { Wrapper as PopperWrapper } from '~/layouts/Popper';
 import style from './menu.module.scss';
 import MenuItem from './MenuItems';
 const cx = classnames.bind(style);
