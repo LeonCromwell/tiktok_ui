@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import classnames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCircleXmark,
-    faSpinner,
-    faMagnifyingGlass,
     faPlus,
     faEllipsisVertical,
     faLanguage,
@@ -17,18 +14,16 @@ import {
     faUser,
     faBookmark,
 } from '@fortawesome/free-solid-svg-icons';
-import HeadLessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 
 import Button from '~/component/Button';
 import style from './Header.module.scss';
 import images from '~/assets/images';
-import { Wrapper as PopperWrapper } from '~/component/Layout/Popper';
-import AccountItem from '~/component/AccountItem';
 import Menu from '~/component/Layout/Popper/Menu';
 import { InboxIcon, MessageIcon } from '~/component/Icons';
 
 import Images from '~/component/Image';
+import Search from '../../Search';
 
 const cx = classnames.bind(style);
 
@@ -91,6 +86,7 @@ const userMenu = [
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
+
     const currentUser = true;
     const handleMenuChange = (onChange) => {
         console.log(onChange);
@@ -105,35 +101,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <img src={images.logo} alt="TikTok"></img>
-                <HeadLessTippy
-                    visible={searchResult.length > 0}
-                    interactive="true"
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <label className={cx('search-title')}>
-                                    <h4>Accounts</h4>
-                                </label>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search account and videos" spellCheck="false" />
-                        <button className={cx('clear-btn')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        <FontAwesomeIcon className={cx('spinner')} icon={faSpinner} />
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </HeadLessTippy>
-
+                <Search />
                 <div className={cx('action')}>
                     <Button text medium leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         <span>Upload</span>
