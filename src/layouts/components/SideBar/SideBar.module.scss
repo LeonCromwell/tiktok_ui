@@ -1,4 +1,93 @@
 .wrapper {
-    width: 356px;
+    width: 240px;
     padding: 20px 0 26px;
+}
+
+//following account
+.following-account-wrapper {
+    position: relative;
+    padding-top: 8px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 0;
+        height: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+    }
+}
+
+.following-account-label {
+    padding: 0 8px;
+
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.093px;
+    color: #161823bf;
+}
+
+.following-see-all {
+    color: rgb(254, 44, 85);
+    padding: 5px;
+    width: max-content;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.093px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-sidebar {
+    position: relative;
+    padding: 20px 8px 24px 8px;
+    margin: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 0;
+        height: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+    }
+}
+.login-sidebar-title {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+}
+
+.Login-sidebar-btn {
+    width: 100%;
+    min-width: 168px;
+    min-height: 48px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+}
+
+//footer
+.footer-sidebar {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.coppy-right {
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.161px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
 }
