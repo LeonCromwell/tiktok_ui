@@ -1,1 +1,1 @@
-export { MessageIcon, InboxIcon } from './Icons';
+export * from './Icons';

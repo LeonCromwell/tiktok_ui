@@ -24,7 +24,7 @@ import Menu from '~/component/Popper/Menu';
 import { InboxIcon, MessageIcon } from '~/component/Icons';
 
 import Images from '~/component/Image';
-import Search from '~/layouts/Search/index';
+import Search from '~/layouts/components/Search';
 
 const cx = classnames.bind(style);
 
@@ -86,7 +86,7 @@ const userMenu = [
 ];
 
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
     const handleMenuChange = (onChange) => {
         console.log(onChange);
     };

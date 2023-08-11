@@ -1,0 +1,31 @@
+.menu-wrapper {
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0px 8px;
+    border-radius: 4px;
+    font-size: 32px;
+    transition: background-color ease-in-out 200ms;
+    color: var(--black);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &.active {
+        color: var(--primary);
+    }
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.028px;
+    margin-left: 8px;
+}
