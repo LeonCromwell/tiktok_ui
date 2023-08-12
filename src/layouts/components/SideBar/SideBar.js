@@ -58,6 +58,78 @@ const ACCOUNTS = [
         full_name: 'Hzii',
         nickname: 'inhales__',
     },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
+    {
+        avatar: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/14f0ba81ad0194d7daadbb7ff517e45a~c5_100x100.jpeg?x-expires=1691924400&x-signature=TmYHhDiHTm5njT%2Bbni4mQY9%2Bwu4%3D',
+        full_name: 'imneko20',
+        nickname: 'imneko02',
+        tick: true,
+    },
 ];
 
 const FOOTER = [
@@ -133,23 +205,25 @@ const FOOTER = [
     ],
 ];
 
+const renderMenu = () =>
+    MENU.map((item, index) => {
+        return <MenuItem key={index} icon={item.icon} title={item.title} to={item.to} />;
+    });
+
+const renderAccount = () => ACCOUNTS.map((item, index) => <Account key={index} data={item} />);
+
+const renderFooter = () => FOOTER.map((item, index) => <FooterSideBar key={index} data={item} />);
 function SideBar() {
     const accountUser = true;
 
     return (
         <aside className={cx('wrapper')}>
-            <Menu>
-                {MENU.map((item, index) => {
-                    return <MenuItem key={index} icon={item.icon} title={item.title} to={item.to} />;
-                })}
-            </Menu>
+            <Menu>{renderMenu()}</Menu>
 
             {accountUser ? (
                 <div className={cx('following-account-wrapper')}>
                     <h2 className={cx('following-account-label')}>Following accounts</h2>
-                    {ACCOUNTS.map((item, index) => (
-                        <Account key={index} data={item} />
-                    ))}
+                    {renderAccount()}
 
                     <div className={cx('following-see-all')}>See all</div>
                 </div>
@@ -165,15 +239,13 @@ function SideBar() {
             )}
 
             <div className={cx('footer-sidebar')}>
-                {FOOTER.map((item, index) => (
-                    <FooterSideBar key={index} data={item} />
-                ))}
-            </div>
+                {renderFooter()}
 
-            <span className={cx('coppy-right')}>
-                @{/*  */}
-                2023 TikTok
-            </span>
+                <span className={cx('coppy-right')}>
+                    @{/*  */}
+                    2023 TikTok
+                </span>
+            </div>
         </aside>
     );
 }

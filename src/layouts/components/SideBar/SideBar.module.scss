@@ -1,6 +1,9 @@
 .wrapper {
     width: 240px;
+    height: 95%;
     padding: 20px 0 26px;
+    position: fixed;
+    overflow-y: overlay;
 }
 
 //following account
