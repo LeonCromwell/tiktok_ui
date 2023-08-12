@@ -8,24 +8,26 @@ import style from './Account.module.scss';
 import Image from '~/component/Image/Image';
 
 const cx = classNames.bind(style);
-function Account({ data }) {
+function AccountItem({ data }) {
     return (
         <Link to={`/profile/${data.nickname}`} className={cx('wrapper')}>
-            <Image className={cx('avatar')} src={data.avatar} alt={data.full_name} />
+            <Image className={cx('avatar')} src={data.avatar} alt={data.last_name} />
             <div className={cx('infor')}>
                 <p className={cx('name')}>
                     <span>{data.nickname}</span>
                     {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                 </p>
 
-                <span className={cx('username')}>{data.full_name}</span>
+                <span className={cx('username')}>
+                    {data.first_name} {data.last_name}
+                </span>
             </div>
         </Link>
     );
 }
 
-Account.propTypes = {
+AccountItem.propTypes = {
     data: PropTypes.object.isRequired,
 };
 
-export default Account;
+export default AccountItem;
